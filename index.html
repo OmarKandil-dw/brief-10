@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+    <div id="nav" class="navbar navbar-expand bg-dark text-white">
+        <div class="container">
+            <a  id="logo" class="navbar-brand fs-3">Montre</a>
+        </div>
+        </div>
+    
+        <input type="text" name="search" id="search" class="form-control" placeholder="Search"autofocus>
+    
+</header>
+      <table  class="table table-bordered table-striped"  id="table" style="width:100%" >
+        <tr>
+          <th id="th" <span onclick="sortTable('id', 'asc')">↑</span>id<span onclick="sortTable('id', 'desc')">↓</span></th>
+          <th id="th" <span onclick="sortTable('Designation', 'asc')">↑</span>Designation<span onclick="sortTable('Designation', 'desc')">↓</span></th>
+          <th id="th"<span onclick="sortTable('Prix', 'asc')">↑</span>Prix<span onclick="sortTable('Prix', 'desc')">↓</span></th>
+          <th id="th"<span onclick="sortTable('catégorie', 'asc')">↑</span>catégorie<span onclick="sortTable('catégorie', 'desc')">↓</span></th>
+          <th id="th"<span onclick="sortTable('Disponibilié', 'asc')">↑</span>Disponibilié<span onclick="sortTable('Disponibilité', 'desc')">↓</span></th>
+          <th id="th"<span onclick="sortTable('fournisseur', 'asc')">↑</span>fournisseur<span onclick="sortTable('fournisseur', 'desc')">↓</span></th>
+
+        </tr>
+      
+
+    <tbody id="mytable"></tbody>
+
+     
+     <script>
+         var DATA;
+        $(document).ready(function(){
+            $.getJSON("text.json",function(data){
+                var DATA = data;
+                var produits_data ='';
+                $.each(data,function(key,value){                                            
+                    produits_data+='<tr>';
+                    produits_data+='<td>'+value.id+ '</td>';
+                    produits_data+='<td>'+value.Designation+ '</td>';
+                    produits_data+='<td>'+value.prix+ '</td>';
+                    produits_data+='<td>'+value.catégorie+'</td>';
+                    produits_data+='<td>'+value["disponibilié"]+ '</td>';
+                    produits_data+='<td>'+value.fournisseur.raisonsocial+"-"+ value.fournisseur.adresse+'</td>'
+                    produits_data+='</tr>'
+
+                });
+                $('#mytable').append(produits_data);
+            });
+        });
+
+
+    //   window.onload = function(){
+
+
+    //         $.get("text.json", function(data){
+    //         console.log(data);
+    //         })
+    //         }
+
+    $(document).ready(function(){
+        $('#search').keyup(function(){
+            search_table($(this).val());
+        });
+        function search_table(value){
+            $('#table tr').each(function(){
+                var erreur   ='false';
+                $(this).each(function(){
+                    if($(this).text().toLowerCase().indexOf(value.toLowerCase()) >=0)
+                    {
+                        erreur = 'true';
+                    }
+                });
+                if(erreur == 'true')
+                {
+                    $(this).show();
+                }
+                else{
+                    $(this).hide();
+                }
+            });
+        }
+    });
+
+// // ++++++++++++sort table ++++++++ //
+     
+        // e = name/last name/id/...
+        function sortTable(e, direction){
+            if(direction == "desc"){
+                DATA.sort(function(a,b){
+                if(a[e] > b[e]){
+                    return -1
+                }
+            })
+            }
+            else if(direction=="asc"){
+                DATA.sort(function(a,b){
+                if(a[e] < b[e]){
+                    return -1
+                }
+            })
+            }
+            $("tbody").html("");
+            fill(DATA);
+        }
+
+
+
+
+
+// th = document.getElementsByTagName('th');
+
+// for(let c=0; c < th.length; c++){
+
+//     th[c].addEventListener('click',item(c))
+// }
+
+
+// function item(c){
+
+//     return function(){
+   
+//       sortTable(c)
+//     }
+// }
+
+
+// function sortTable(c) {
+//   var table, rows, switching, i, x, y, shouldSwitch;
+//   table = document.getElementById("table");
+//   switching = true;
+
+//   while (switching) {
+
+//     switching = false;
+//     rows = table.rows;
+  
+//     for (i = 1; i < (rows.length - 1); i++) {
+//       shouldSwitch = false;
+//       x = rows[i].getElementsByTagName("TD")[c];
+//       y = rows[i + 1].getElementsByTagName("TD")[c];
+//       if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+//         shouldSwitch = true;
+//         break;
+//       }
+//     }
+//     if (shouldSwitch) {
+//       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+//       switching = true;
+//     }
+//   }
+// }
+
+//     var table = $('table');
+
+// $('.sortable th')
+//     .wrapInner('<span title="sort this column"/>')
+//     .each(function(){
+
+//         var th = $(this),
+//             thIndex = th.index(),
+//             inverse = false;
+
+//         th.click(function(){
+
+//             table.find('td').filter(function(){
+
+//                 return $(this).index() === thIndex;
+
+//             }).sortElements(function(a, b){
+
+//                 if( $.text([a]) == $.text([b]) )
+//                     return 0;
+
+//                 return $.text([a]) > $.text([b]) ?
+//                     inverse ? -1 : 1
+//                     : inverse ? 1 : -1;
+
+//             }, function(){
+
+//                 // parentNode is the element we want to move
+//                 return this.parentNode; 
+
+//             });
+
+//             inverse = !inverse;
+
+//         });
+
+//     });
+
+
+        
+      </script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,232 @@
+[
+  {
+    
+                "id": 10,
+                "Designation":"Rolex" ,
+                "prix": "200$",
+                "catégorie":"homme",
+                "disponibilié" : ["Tanger","Casablanca","Rabat","Fes"],
+                "fournisseur": 
+                    {  "raisonsocial": "Rolex" ,
+                     "adresse": "Genève"  }
+                    
+                    },
+                {   
+                "id": 20,
+                "Designation":"Omega"  ,
+                "prix": "220$", 
+                "catégorie":"femme",
+                "disponibilié" : ["Tanger","Casablanca","Rabat"],
+                "fournisseur": 
+                            {  "raisonsocial": "Omega" ,   
+                                "adresse": "Tense Juweliers"  }
+                    
+                
+                }, 
+                { 
+                    "id": 30,
+                    "Designation":"Cartier"  ,
+                    "prix": "170$",
+                    "catégorie" : "homme", 
+                    "disponibilié" : ["Tanger","Rabat","Fes"],
+                    "fournisseur": 
+                                {  "raisonsocial": "Cartier",
+                                    "adresse": "Allemagne" }
+                    
+                },
+
+                    { "id": 40,
+                    "Designation":"Montblanc"  ,
+                    "catégorie":"homme",
+                    "prix": "200$",
+                    "disponibilié" : ["Tanger","Casablanca","Fes"],
+                    "fournisseur": 
+                                {  "raisonsocial": "Montblanc" ,
+                                   "adresse": "America"  }
+                                
+                    },
+
+
+                    {
+                        "id": 50,
+                        "Designation":"Patek Philippe"  ,
+                        "catégorie":"femme",
+                        "prix": "160$",
+                        "disponibilié" : ["Tanger","Casablanca","Rabat","Fes"],
+                        "fournisseur": 
+                                    {  "raisonsocial": "Patek "   ,
+                                       "adresse": "France"  }
+                        
+                    },
+                    {
+                        "id": 60,
+                        "Designation":"TAG Heuer"  ,
+                        "catégorie" : "homme",
+                        "prix": "160$",
+                        "disponibilié" : ["Tanger","Casablanca","Rabat","Fes"],
+                        "fournisseur": 
+                                    {  "raisonsocial": "TAG"   ,
+                                     "adresse": "indonesia"  }
+                        
+                    },
+                    {
+                        "id": 70,
+                        "Designation":" Audemars Piguet"  ,
+                        "catégorie" : "homme",
+                        "prix": "170$",
+                        "disponibilié" : ["Casablanca","Rabat","Fes"],
+                        "fournisseur": 
+                                    {  "raisonsocial": "Piguet" ,
+                                       "adresse": "Canada"  }
+                        
+                    },
+                    {
+                        "id": 80,
+                        "Designation":"Vacheron Constantin"  ,
+                        "catégorie" : "femme",
+                        "prix": "160$",
+                        "disponibilié" : ["Tanger","Casablanca","Rabat"],
+                        "fournisseur": 
+                                    {  "raisonsocial": "Constantin"   ,
+                                       "adresse": "Genève"  }
+                        
+                    },
+                
+                    {
+                        "id": 90,
+                        "Designation":"Jaeger-LeCoultre" ,
+                        "catégorie" : "homme",
+                        "prix": "160$",
+                        "disponibilié" : ["Tanger","Casablanca","Fes"],
+                        "fournisseur": 
+                                    {  "raisonsocial": "Jaeger" ,
+                                      "adresse": "Russia"  }
+                        
+                    },
+                    {
+                        "id": 100,
+                        "Designation":"Chopard",
+                        "catégorie":"homme",
+                        "prix": "120$",
+                        "disponibilié" : ["Tanger","Casablanca","Rabat"],
+                        "fournisseur": 
+                                    {  "raisonsocial": "Chopard"   ,
+                                      "adresse": "France"  }
+                        
+                    },
+                    {
+                        "id": 110,
+                        "Designation":"Panerai"  ,
+                        "catégorie" : "homme",
+                        "prix": "180$",
+                        "disponibilié" : ["Tanger","Casablanca","Rabat","Fes"],
+                        "fournisseur": 
+                                    {  "raisonsocial": "Panerai"   ,
+                                   "adresse": "Polonia"  }
+                        
+                    },
+                    {
+                        "id": 120,
+                        "Designation":"Ulysse Nardin"  ,
+                        "catégorie" : "femme",
+                        "prix": "120$",
+                        "disponibilié" : ["Tanger","Rabat","Fes"],
+                        "fournisseur": 
+                                    {  "raisonsocial": "Ulysse"   ,
+                                       "adresse": "Philipine"}
+                        
+                    },
+                    {
+                        "id": 130,
+                        "Designation":"Piaget SA"  ,
+                        "catégorie":"homme",
+                        "prix": "160$",
+                        "disponibilié" : ["Tanger","Casablanca","Fes"],
+                        "fournisseur": 
+                                    {  "raisonsocial": "SA"   ,
+                                     "adresse": "Belgique"  }
+                        
+                    },
+                    {
+                        "id": 140,
+                        "Designation":" Breitling"  ,
+                        "catégorie": "homme",
+                        "prix": "200$",
+                        "disponibilié" : ["Tanger","Casablanca","Rabat"],
+                        "fournisseur": 
+                                    {  "raisonsocial": "Breitling"   ,
+                                       "adresse": "America" }
+                        
+                    },
+                    {
+                        "id": 150,
+                        "Designation":"Bremont"  ,
+                        "catégorie":"homme",
+                        "prix": "200$",
+                        "disponibilié" : ["Casablanca","Rabat","Fes"],
+                        "fournisseur": 
+                                    {  "raisonsocial":"Bremont"   ,
+                                       "adresse": "China"  }
+                        
+                    },
+                    {
+                        "id": 160,
+                        "Designation":"Louis Moinet"  ,
+                        "catégorie":"homme",
+                        "prix": "130$",
+                        "disponibilié" : ["Tanger","Casablanca","Fes"],
+                        "fournisseur": 
+                                    {  "raisonsocial": "Louis Moinet"   ,
+                                      "adresse": "Suidde"  }
+                        
+                    },
+                    {
+                        "id": 170,
+                        "Designation":"Corum"  ,
+                        "catégorie" : "homme",
+                        "prix": "140$",
+                        "disponibilié" : ["Casablanca","Rabat","Fes"],
+                        "fournisseur": 
+                                    {  "raisonsocial": "Corum"   ,
+                                       "adresse": "Saudia" }
+                        
+                    },
+                    {
+                        "id": 180,
+                        "Designation":"Girard Perregaux"  ,
+                        "catégorie":"femme",
+                        "prix": "290$",
+                        "disponibilié" : ["Tanger","Casablanca","Rabat"],
+                        "fournisseur": 
+                                    {  "raisonsocial": "Girard Perregaux"   ,
+                                     "adresse": "Allemagne"  }
+                        
+                    },
+                    {
+                        "id": 190,
+                        "Designation":"Bell & Ross",
+                        "catégorie":"femme",
+                        "prix": "100$",
+                        "disponibilié" : ["Tanger","Rabat","Fes"],
+                        "fournisseur": 
+                                    {  "raisonsocial": "Bell & Ross"   ,
+                                       "adresse": "France"  }
+                        
+                    },
+                    {
+                        "id": 200,
+                        "Designation":"Hublot"  ,
+                        "catégorie" : "homme",
+                        "prix": "160$",
+                        "disponibilié" : ["Tanger","Casablanca","Fes"],
+                        "fournisseur": 
+                                    {  "raisonsocial": "Hublot"   ,
+                                       "adresse": "France "  }
+                        
+                    }
+                
+
+]
+
+
+      
