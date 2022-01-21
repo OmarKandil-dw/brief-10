@@ -42,7 +42,7 @@
          var DATA;
         $(document).ready(function(){
             $.getJSON("text.json",function(data){
-                var DATA = data;
+                DATA = data;
                 var produits_data ='';
                 $.each(data,function(key,value){                                            
                     produits_data+='<tr>';
@@ -110,8 +110,20 @@
                 }
             })
             }
+            var produits_data = "";
+            $.each(DATA,function(key,value){                                            
+                    produits_data+='<tr>';
+                    produits_data+='<td>'+value.id+ '</td>';
+                    produits_data+='<td>'+value.Designation+ '</td>';
+                    produits_data+='<td>'+value.prix+ '</td>';
+                    produits_data+='<td>'+value.catégorie+'</td>';
+                    produits_data+='<td>'+value["disponibilié"]+ '</td>';
+                    produits_data+='<td>'+value.fournisseur.raisonsocial+"-"+ value.fournisseur.adresse+'</td>'
+                    produits_data+='</tr>'
+
+                });
             $("tbody").html("");
-            fill(DATA);
+            $('#mytable').append(produits_data);
         }
 
 
